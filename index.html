@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <meta http-equiv="Robots" content="None"/>
+  <meta http-equiv="Googlebot" content="Noarchive"/>
+  <meta http-equiv="Author" content="David Curdie"/>
+  <meta http-equiv="Description" content="Simple math flash card webapp."/>
+  <meta http-equiv="Keywords" content="math, flashcard, addition, subtraction, multiplication, division"/>
+  <title>Math Flashcard Practice Tool</title>
+  <link rel="stylesheet" type="text/css" href="flashcard.css"/>
+  <script type="text/javascript" src="flashcard.js"></script>
+ </head>
+ <body class="" id="FlashBody" onLoad="cardInit()">
+  <div class="pagecontent" id="FlashDiv">
+   <div class="timer" id="TimerDiv">
+    <p class="timertext">Timer:&nbsp;<mark id="TimerVal">&nbsp;</mark></p>
+   </div>
+   <div class="flashcard" id="FlashTableDiv">
+    <input id="Timer" name="timer" type="hidden" value="10"/>
+    <input id="Operation" name="operation" type="hidden" value="addition"/>
+    <input id="Precision" name="precision" type="hidden" value="0"/>
+    <table class="flashcard" id="FlashTable">
+     <tr>
+      <td colspan="2" class="flashcard" id="TopNumber">&nbsp;</td>
+     </tr>
+     <tr>
+      <td class="flashcard" id="Operator">&nbsp;</td>
+      <td class="flashcard" id="BottomNumber">&nbsp;</td>
+     </tr>
+     <tr>
+      <td colspan="2" class="flashcard" id="Answer">&nbsp;</td>
+     </tr>
+    </table>
+   </div>
+   <div class="newproblem" id="NewProblemDiv">
+    <p class="newproblem" id="NewProblemLabel">New:
+     <a class="newproblem" id="NewAdditionProblem" onClick="newCard('addition')" href="#">Addition</a>
+     <a class="newproblem" id="NewSubtractionProblem" onClick="newCard('subtraction')" href="#">Subtraction</a>
+     <a class="newproblem" id="NewMultiplicationProblem" onClick="newCard('multiplication')" href="#">Multiplication</a>
+     <a class="newproblem" id="NewDivisionProblem" onClick="newCard('division')" href="#">Division</a>
+    </p>
+   </div>
+  </div>
+ </body>
+</html>

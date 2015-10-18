@@ -1,0 +1,68 @@
+.pagecontent {
+    padding: 24px;
+}
+body {
+  background: #606060;
+  font: 184px Georgia, serif;
+  position: relative;
+}
+div#FlashDiv {
+  border: 1px dashed black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #ffffcc;
+  position: absolute;
+}
+div#TimerDiv {
+  text-align: center;
+}
+div#FlashTableDiv {
+  text-align: center;
+  position: relative;
+  left: 25%;
+}
+div#NewProblemDiv {
+  text-align: center;
+}
+mark#TimerVal {
+  background: #ffffcc;
+  text-decoration: underline;
+}
+.newproblem {
+  font: 24px Arial, Helvetica, sans-serif;
+}
+.timertext {
+  font: 48px Arial, Helvetica, sans-serif;
+}
+mi {
+  font: 24px Arial, Helvetica, sans-serif;
+}
+mn {
+  font: 24px Arial, Helvetica, sans-serif;
+}
+mo {
+  font: 24px Arial, Helvetica, sans-serif;
+}
+mtext {
+  font: 24px Arial, Helvetica, sans-serif;
+}
+table#FlashTable {
+  padding: 15px;
+  position: relative;
+}
+td#TopNumber {
+  text-align: right;
+}
+td#Operator {
+  border-bottom: 2px solid black;
+  text-align: left;
+}
+td#BottomNumber {
+  border-bottom: 2px solid black;
+  text-align: right;
+}
+td#Answer {
+  text-align: right;
+}
