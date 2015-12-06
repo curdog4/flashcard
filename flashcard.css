@@ -24,7 +24,7 @@ div#FlashTableDiv {
   left: 25%;
 }
 div#NewProblemDiv {
-  text-align: center;
+  text-align: left;
 }
 mark#TimerVal {
   background: #ffffcc;

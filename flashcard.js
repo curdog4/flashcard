@@ -29,6 +29,11 @@ function cardInit()
     case "subtraction":
       opHtml = "&#150;";
       answer = number1 - number2;
+      if( number1 < number2 ) {
+        answer = number2 - number1;
+        document.getElementById("TopNumber").innerHTML = number2.toFixed(precision);
+        document.getElementById("BottomNumber").innerHTML = number1.toFixed(precision);
+      }
       break;
     case "multiplication":
       opHtml = "&#215;";
@@ -36,7 +41,11 @@ function cardInit()
       break;
     case "division":
       opHtml = "&#247;";
-      answer = number1 / number2;
+      answer = number2;
+      number2 = number1;
+      number1 = answer * number2;
+      document.getElementById("TopNumber").innerHTML = number1.toFixed(precision);
+      document.getElementById("BottomNumber").innerHTML = number2.toFixed(precision);
       break;
     default:
       // default to addition...
@@ -65,12 +74,24 @@ function newCard(newop)
 function updateTimer()
 {
   var currentTimer = parseInt(document.getElementById("TimerVal").innerHTML)
+  var elementsArray = document.getElementsByClassName("newproblem");
   if (currentTimer > 0) {
     document.getElementById("Answer").style.visibility = "collapse";
+    for ( i=0; i < elementsArray.length; i++ ) {
+        if ( elementsArray[i].tagName == "DIV" ) {
+            elementsArray[i].style.visibility = "hidden";
+        }
+    }
     var t = setTimeout(updateTimer,1000);
     currentTimer = currentTimer - 1;
     document.getElementById("TimerVal").innerHTML = currentTimer.toString();
   } else {
     document.getElementById("Answer").style.visibility = "visible";
+    for ( i=0; i < elementsArray.length; i++ ) {
+        //alert(elementsArray[i].tagName);
+        if ( elementsArray[i].tagName == "DIV" ) {
+            elementsArray[i].style.visibility = "visible";
+        }
+    }
   }
 }
